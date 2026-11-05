@@ -155,7 +155,7 @@ function WeeklyBrief({
           <div className="suggestion-title-wrap">
             <span className="suggestion-icon"><MessageCircle aria-hidden="true" /></span>
             <div>
-              <span className="suggestion-kicker">PROPUESTA DE RECURRENCE</span>
+              <span className="suggestion-kicker">PROPUESTA DE RECOMPRA</span>
               <h3>Un detalle para volver</h3>
             </div>
           </div>

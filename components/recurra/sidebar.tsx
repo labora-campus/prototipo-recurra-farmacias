@@ -19,6 +19,7 @@ import type { AppSection } from "./data"
 
 type SidebarProps = {
   activeSection: AppSection
+  campaignApproved: boolean
   onNavigate: (section: AppSection) => void
 }
 
@@ -30,7 +31,7 @@ const navigation: { id: AppSection; label: string; icon: typeof LayoutDashboard 
   { id: "datos", label: "Datos", icon: Database },
 ]
 
-export function Sidebar({ activeSection, onNavigate }: SidebarProps) {
+export function Sidebar({ activeSection, campaignApproved, onNavigate }: SidebarProps) {
   return (
     <aside className="sidebar">
       <button
@@ -70,7 +71,7 @@ export function Sidebar({ activeSection, onNavigate }: SidebarProps) {
           >
             <Icon data-icon="inline-start" aria-hidden="true" />
             <span>{label}</span>
-            {id === "campanas" && activeSection !== "campanas" ? (
+            {id === "campanas" && !campaignApproved && activeSection !== "campanas" ? (
               <span className="nav-indicator" aria-label="Hay una campaña para revisar" />
             ) : null}
           </Button>

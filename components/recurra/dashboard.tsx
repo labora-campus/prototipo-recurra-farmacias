@@ -56,7 +56,7 @@ export function RecurraDashboard() {
 
   return (
     <div className="app-shell">
-      <Sidebar activeSection={activeSection} onNavigate={setActiveSection} />
+      <Sidebar activeSection={activeSection} campaignApproved={campaignApproved} onNavigate={setActiveSection} />
       <main className="main-area" id="main-content">
         <header className="app-topbar">
           <div className="breadcrumb-line">
